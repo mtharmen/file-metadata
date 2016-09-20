@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mtharmen/file-metadata/issues"
   },
-  "homepage": "https://github.com/mtharmen/file-metadata#readme"
+  "homepage": "https://github.com/mtharmen/file-metadata#readme",
+  "dependencies": {
+    "multer": "^1.2.0"
+  }
 }
