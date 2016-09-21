@@ -15,6 +15,7 @@ app.post('/analyze', upload.single('fileSize'), function(req,res){
     res.json({ filesize: req.file.size});
 });
 
-app.listen(8080, function() {
-    console.log('Listening on port 8080');
-})
+var port = process.env.PORT || 8080;
+app.listen(port, function() {
+    console.log('Listening on port ', port);
+});
