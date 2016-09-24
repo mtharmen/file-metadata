@@ -17,5 +17,5 @@ https://file-metadata-r282.herokuapp.com
 will be returned at 
 
 ```text
-https://file-metadata-r282.herokuapp.com/upload
+https://file-metadata-r282.herokuapp.com/analyze
 ```
