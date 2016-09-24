@@ -8,7 +8,7 @@
 Upload a file at
 
 ```text
-https://file-metadata-r282.herokuapp.com
+https://mtharmen-file-metadata.herokuapp.com
 ```
 ###Output:
 ```js
@@ -17,5 +17,5 @@ https://file-metadata-r282.herokuapp.com
 will be returned at 
 
 ```text
-https://file-metadata-r282.herokuapp.com/analyze
+https://mtharmen-file-metadata.herokuapp.com/analyze
 ```
