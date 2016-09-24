@@ -12,7 +12,7 @@ https://mtharmen-file-metadata.herokuapp.com
 ```
 ###Output:
 ```js
-{"size": 258957}
+{"filesize": 258957}
 ```
 will be returned at 
 
