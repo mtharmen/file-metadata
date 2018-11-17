@@ -1,21 +1,11 @@
-# API Basejump: File Metadata Microservice
-## User stories:
-1. I can submit a FormData object that includes a file upload.
-2. When I submit something, I will receive the file size in bytes within the JSON response
 
-### Example usage:
+# API Project: File Metadata Microservice for freeCodeCamp
 
-Upload a file at
+### User stories:
 
-```text
-https://mtharmen-file-metadata.herokuapp.com
-```
-###Output:
-```js
-{"filesize": 258957}
-```
-will be returned at 
+1. I can submit a form that includes a file upload.
+2. The from file input field  has the "name" attribute set to "upfile".
+3. When I submit something, I will receive the file name and size in bytes within the JSON response
 
-```text
-https://mtharmen-file-metadata.herokuapp.com/analyze
-```
+### Usage :
+* Go to the main page, and upload a file using the provided form.

@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <title>mtharmen File Metadata Microservice</title>
+  </head>
+  <body>
+    <h1>
+      API Basejump: File Metadata Microservice
+    </h1>
+    <blockquote>
+      <h2>User stories:</h2>
+      <ol>
+        <li>I can submit a form object that includes a file upload.</li>
+        <li>The from file input field has the "name" attribute set to "upfile".</li>
+        <li>When I submit something, I will receive the file name, and size in bytes within the JSON response.</li>
+      </ol>
+      <form action="/analyze" method="POST" enctype="multipart/form-data">
+        <input id="file-browse" type="file" name="upfile" />
+        <input id="submit" type="submit" value="Analyze" />
+      </form>
+    </blockquote>
+    <a href="https://github.com/mtharmen/file-metadata" target="_blank">Github Source</a>
+  </body>
+</html>

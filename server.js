@@ -1,23 +1,31 @@
-var express = require('express');
-var multer = require('multer');
-var fs = require('fs');
+var path = require('path')
+var fs = require('fs')
+var express = require('express')
+var app = express()
+var multer = require('multer')
 var storage = multer.diskStorage({
-    destination: function (req, file, callback) {
-        callback(null, './temp');
-    }
-});
-var upload = multer({ storage: storage });
+  destination: function(req, file, callback) {
+    callback(null, path.join(__dirname, '/temp/'))
+  },
+  filename: function(req, file, callback) {
+    callback(null, file.originalname)
+  }
+})
+var upload = multer({ storage })
 
-var app = express();
+app.use('/', express.static(path.join(__dirname, '/views')))
 
-app.use('/', express.static(__dirname + '/styles'));
+app.post('/analyze', upload.single('upfile'), (req,res) => {
+  var tempPath = path.join(__dirname, '/temp/', req.file.originalname)
+  fs.unlinkSync(tempPath)
+  res.json({
+    name: req.file.originalname,
+    type: req.file.mimetype,
+    size: req.file.size
+  })
+})
 
-app.post('/analyze', upload.single('fileSize'), function(req,res){
-    fs.unlinkSync("./temp/" + req.file.filename);
-    res.json({ filesize: req.file.size});
-});
-
-var port = process.env.PORT || 8080;
-app.listen(port, function() {
-    console.log('Listening on port ', port);
-});
+var port = process.env.PORT || 8080
+app.listen(port, () => {
+  console.log('Listening on port ', port)
+})
